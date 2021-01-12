@@ -10,13 +10,13 @@ class Current_User_Test extends TestCase
 {
     private $userId;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->userId = \ApplicationInsights\Channel\Contracts\Utils::returnGuid();
         Utils::setUserCookie($this->userId);
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         Utils::clearUserCookie();
     }
@@ -39,7 +39,7 @@ class Current_User_Test extends TestCase
         Utils::clearUserCookie();
         $currentUser = new \ApplicationInsights\Current_User();
 
-        $this->assertTrue($currentUser->id != NULL && $currentUser->id != $this->userId);
+        $this->assertTrue($currentUser->id != null && $currentUser->id != $this->userId);
     }
 
 }
