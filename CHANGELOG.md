@@ -1,8 +1,10 @@
 # Changelog
 
-## 0.4.6 (unreleased)
+## 0.5.0
 
-TBD
+- Support for Laravel 8
+- Support for Guzzle 7.x
+- PHPUnit updated to 9.x
 
 ## 0.4.5
 
