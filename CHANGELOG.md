@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.1
+
+- Support PHP 8
+
 ## 0.5.0
 
 - Support for Laravel 8
