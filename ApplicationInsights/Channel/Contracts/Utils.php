@@ -1,6 +1,8 @@
 <?php
 namespace ApplicationInsights\Channel\Contracts;
 
+use Carbon\Carbon;
+
 /**
  * Contains utilities for contract classes
  */
@@ -87,11 +89,11 @@ class Utils
     {
         if ($time == NULL)
         {
-            return gmdate('c') . 'Z';
+            return Carbon::now()->toISOString();
         }
         else
         {
-            return gmdate('c', $time) . 'Z';
+            return str_replace("Z", "0Z", Carbon::createFromTimestamp($time)->toISOString());
         }
     }
     
